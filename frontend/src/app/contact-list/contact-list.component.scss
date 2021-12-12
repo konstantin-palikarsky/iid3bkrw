@@ -1,0 +1,48 @@
+.contact-edit{
+  display: flex;
+  justify-content: space-between;
+}
+#edit{
+  font-size: 1.5em;
+}
+
+.my-contact-card{
+  margin-bottom: 1em;
+}
+
+.card-action-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-group-fab {
+  position: fixed;
+  width: 50px;
+  height: auto;
+  right: 20px; bottom: 20px;
+}
+.btn-group-fab div {
+  position: relative; width: 100%;
+  height: auto;
+}
+.btn-group-fab .btn {
+  position: absolute;
+  bottom: 0;
+  border-radius: 50%;
+  display: block;
+  width: 40px; height: 40px;
+  margin: 4px auto;
+}
+.btn-group-fab .btn-main {
+  width: 4em; height: 4em;
+  right: 50%; margin-right: -25px;
+  z-index: 9;
+}
+
+.my-input{
+  margin-bottom: 0.5em;
+}
+
+.my-ng-dropdown{
+  margin-left: -4em;
+}
