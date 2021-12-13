@@ -9,7 +9,7 @@
         <div class="card-body">
           <div class="contact-edit">
             <h5 class="card-title">{{contact.name}}</h5>
-            <i class="fa fa-ellipsis-h" (click)="open(content)" aria-hidden="true"></i>
+            <i class="fa fa-ellipsis-h" aria-hidden="true"></i>
           </div>
 
           <h6 class="card-subtitle mb-2 text-muted">{{contact.email}}</h6>
@@ -27,46 +27,9 @@
 
 <div class="btn-group-fab" role="group" aria-label="FAB Menu">
   <div>
-    <button type="button" class="btn btn-main btn-primary has-tooltip" data-placement="left" title="Menu"
-            (click)="open(content)"><i class="fa fa-plus"></i></button>
+    <button type="button" class="btn btn-main btn-primary has-tooltip" data-placement="left" title="Menu"><i
+      class="fa fa-plus"></i></button>
   </div>
 </div>
 
-<ng-template #content let-modal>
-
-  <div class="modal-header">
-    <h4 class="modal-title" id="modal-basic-title">Add contact</h4>
-    <button type="button" class="btn btn-danger" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-
-  <div class="modal-body">
-    <form>
-
-      <div class="form-group my-input">
-        <label for="contactName">Full Name</label>
-
-        <div class="input-group">
-
-          <input id="contactName" class="form-control" placeholder="Name:" name="nm" maxlength="64">
-        </div>
-      </div>
-
-      <div class="form-group  my-input">
-        <label for="contactEmail">Email address</label>
-
-        <div class="input-group">
-          <input id="contactEmail" class="form-control" placeholder="Email:" name="nm" maxlength="64">
-        </div>
-      </div>
-
-    </form>
-  </div>
-
-  <div class="modal-footer">
-    <button type="button" class="btn btn-success" (click)="modal.close('Save click')">Save</button>
-  </div>
-
-</ng-template>
 
