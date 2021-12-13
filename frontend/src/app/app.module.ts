@@ -9,6 +9,8 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {ReactiveFormsModule} from '@angular/forms';
 import { ContactListComponent } from './contact-list/contact-list.component';
 import { HeaderComponent } from './header/header.component';
+import { PaymentHistoryComponent } from './payment-history/payment-history.component';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
 @NgModule({
@@ -16,6 +18,8 @@ import { HeaderComponent } from './header/header.component';
     AppComponent,
     ContactListComponent,
     HeaderComponent,
+    PaymentHistoryComponent,
+    LandingPageComponent,
   ],
   imports: [
     BrowserModule,
