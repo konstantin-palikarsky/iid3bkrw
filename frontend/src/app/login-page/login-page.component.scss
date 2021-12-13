@@ -1,10 +1,14 @@
-@import url('https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css');
 .my-form-control {
   -webkit-transition: none;
   transition: none;
   width: 32px;
   height: 32px;
-  text-align: center
+  text-align: center;
+  padding: 0;
+}
+.my-2fa{
+  display: flex;
+  justify-content: center;
 }
 
 .my-form-control:focus {
