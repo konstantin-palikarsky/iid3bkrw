@@ -23,7 +23,8 @@
           <h6 class="card-subtitle mb-2 text-muted">{{contact.email}}</h6>
           <div class="card-action-buttons">
             <button class="btn btn-primary"><i class="fa fa-paper-plane-o"></i> Send</button>
-            <button class="btn btn-success" (click)="editContact(contact.id)" data-toggle="modal" data-target="#requestMoneyModal">
+            <button class="btn btn-success" (click)="editContact(contact.id)" data-toggle="modal"
+                    data-target="#requestMoneyModal">
               <i class="fa fa-credit-card"></i> Request
             </button>
           </div>
@@ -118,8 +119,8 @@
         <form>
           <div class="form-group">
             <label for="exampleInputEmail1">Amount:</label>
-            <input type="email" class="form-control" id="inputMoney" aria-describedby="emailHelp"
-                   placeholder="Specify requested sum €:">
+            <input type="number" class="form-control" id="inputMoney" aria-describedby="emailHelp"
+                   placeholder="Specify requested sum €">
           </div>
         </form>
 
