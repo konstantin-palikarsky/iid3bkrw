@@ -9,6 +9,8 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class ContactListComponent implements OnInit {
   public contacts: Array<Contact>;
+  public edit = true;
+
   display = 'none';
 
   constructor(private modalService: NgbModal) {
