@@ -1,1 +1,34 @@
-<p>payment-history works!</p>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="container">
+  <div class="row" *ngFor="let transaction of transactions">
+    <div class="col">
+
+      <div class="card my-transaction-card">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{transaction.isPayment ? "To: " + transaction.receiver : "From: " + transaction.sender}}
+          </h5>
+
+
+          <h6 class="card-subtitle mb-2 text-muted">{{transaction.date.toDateString()}}</h6>
+          <h6 class="card-subtitle mb-2 text-muted">{{transaction.date.toLocaleTimeString()}}</h6>
+
+          <div class="my-card-footer">
+            <h5 class="card-title"
+                [ngClass]="{'sent-amount': transaction.isPayment, 'received-amount': !transaction.isPayment}">
+              {{transaction.isPayment ? "-€" : "€"}}{{transaction.amount}}
+            </h5>
+            <button type="button" class="btn btn-info">Details</button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+

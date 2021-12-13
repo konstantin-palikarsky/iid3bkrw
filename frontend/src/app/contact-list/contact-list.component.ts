@@ -15,7 +15,7 @@ export class ContactListComponent implements OnInit {
 
   display = 'none';
 
-  constructor(private modalService: NgbModal) {
+  constructor() {
     this.contacts = new Array<Contact>();
 
     for (let i = 0; i < 10; i++) {
