@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="container">
+  <div class="row" *ngFor="let transaction of transactions">
+    <div class="col">
+
+      <div class="card my-transaction-card">
+        <div class="card-body">
+          <h5 class="card-title">
+            {{transaction.isPayment ? "To: " + transaction.receiver : "From: " + transaction.sender}}
+          </h5>
+
+
+          <h6 class="card-subtitle mb-2 text-muted">{{transaction.date.toDateString()}}</h6>
+
+
+          <div class="my-card-footer">
+            <h5 class="card-title"
+                [ngClass]="{'sent-amount': transaction.isPayment, 'received-amount': !transaction.isPayment}">
+              {{transaction.isPayment ? "-€" : "€"}}{{transaction.amount}}
+            </h5>
+            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal"
+                    (click)="transactionDetailed = transaction">Details
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel"
+     aria-hidden="true" *ngIf="transactionDetailed">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="detailsModalLabel">Transaction details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h6>Transaction {{transactionDetailed.isPayment ? "to: " : "from: "}}</h6>
+              <p>{{transactionDetailed.isPayment ? transactionDetailed.receiver : transactionDetailed.sender}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h6> {{transactionDetailed.isPayment ? "Receiver email: " : "Sender email: "}}</h6>
+              <p>{{transactionDetailed.email}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h6>Time of transaction:</h6>
+              <p>{{transactionDetailed.date.toDateString() + ", " + transactionDetailed.date.toLocaleTimeString()}}</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <h6>Amount:</h6>
+              <p>{{"€" + transactionDetailed.amount}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
