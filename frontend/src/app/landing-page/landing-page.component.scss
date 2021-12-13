@@ -1,0 +1,37 @@
+.welcome-col {
+  display: flex;
+  justify-content: center;
+}
+
+.funds-text {
+  display: flex;
+  justify-content: center;
+  color: limegreen;
+}
+
+.available-text {
+  display: flex;
+  justify-content: center;
+}
+
+.card-row {
+  margin-top: 2em;
+}
+
+.my-bottom-nav {
+  border-top-right-radius: 0.5em;
+  border-top-left-radius: 0.5em;
+
+  height: 4em;
+}
+
+.bottom-nav-button{
+  color: white;
+}
+i{
+  font-size: 1.25em;
+}
+.vl {
+  border-left: 6px solid green;
+  height: 500px;
+}
