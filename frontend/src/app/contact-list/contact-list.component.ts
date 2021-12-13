@@ -10,6 +10,8 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 export class ContactListComponent implements OnInit {
   public contacts: Array<Contact>;
   public edit = true;
+  public contactName = '';
+  public contactMail = '';
 
   display = 'none';
 
@@ -19,7 +21,8 @@ export class ContactListComponent implements OnInit {
     for (let i = 0; i < 10; i++) {
       const contact = {
         name: 'Santa Claus' + i,
-        email: 'santa.claus@gmail.com' + i
+        email: 'santa.claus@gmail.com' + i,
+        id: i
       };
 
 
@@ -32,11 +35,15 @@ export class ContactListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  open(content: any): void {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
+  public editContact(id: number) {
+    this.edit = true;
+    this.contactMail = this.contacts[id].email;
+    this.contactName = this.contacts[id].name;
+  }
 
-    }, (reason) => {
-
-    });
+  public addContact() {
+    this.edit = false;
+    this.contactMail = '';
+    this.contactName = '';
   }
 }
