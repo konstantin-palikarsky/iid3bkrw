@@ -12,4 +12,9 @@ export class LandingPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  toggleFab(event){
+    console.log(event.currentTarget);
+    event.currentTarget.parentElement.classList.toggle('open');
+  }
+
 }

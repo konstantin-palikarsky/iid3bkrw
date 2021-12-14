@@ -12,6 +12,7 @@ import {HeaderComponent} from './header/header.component';
 import {PaymentHistoryComponent} from './payment-history/payment-history.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import {LoginPageComponent} from './login-page/login-page.component';
     PaymentHistoryComponent,
     LandingPageComponent,
     LoginPageComponent,
+    PaymentComponent,
   ],
   imports: [
     BrowserModule,

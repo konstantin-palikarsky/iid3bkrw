@@ -22,6 +22,17 @@
     </div>
   </div>
 </div>
+<div class="fab-container">
+  <button routerLink="/payment" class="btn btn-primary fab-add-payment">
+    <img src="/assets/send.svg" />
+  </button>
+  <button class="btn btn-primary fab-receive-payment">
+    <img src="/assets/request.svg" />
+  </button>
+  <button (click)="toggleFab($event)" class="btn btn-primary fab-main">
+    <i class="fa fa-plus"></i>
+  </button>
+</div>
 
 <nav class="navbar my-bottom-nav fixed-bottom navbar-dark bg-primary">
   <button routerLink="/contacts" class="btn bottom-nav-button"><i class="fa fa-address-book-o" aria-hidden="true"></i>
