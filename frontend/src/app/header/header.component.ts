@@ -7,10 +7,20 @@ import {Location} from '@angular/common';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-
-  constructor(private location: Location) { }
+  public isLandingPage: boolean;
+  public pageTitle: string;
+  public pageTitles = {
+    '/landing': 'Home',
+    '/payments': 'Transactions',
+    '/contacts': 'Contacts'
+  };
+  constructor(private location: Location) {}
 
   ngOnInit(): void {
+    this.location.onUrlChange((url, state) =>{
+      this.isLandingPage = this.location.isCurrentPathEqualTo('/landing');
+      this.pageTitle = this.pageTitles[this.location.path()];
+    });
   }
 
   public goBack(){

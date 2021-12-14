@@ -2,3 +2,43 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '/node_modules/bootstrap';
+
+html{
+  background: black;
+}
+.card{
+  background: #1F1F1F !important;
+  color:white !important;
+}
+.dropdown-menu{
+  background: #373737 !important;
+
+}
+.dropdown-item{
+  color:white !important;
+
+}
+.btn-success{
+  background: #33D788 !important;
+  color:black !important;
+}
+
+.modal-content{
+  background: #1F1F1F !important;
+  color:white !important;
+}
+.modal-header {
+  border-bottom: 1px solid #000000 !important;
+}
+.modal-footer {
+  border-top: 1px solid #000000 !important;
+}
+.modal-content span{
+  color:white !important;
+}
+
+.modal-content input{
+  background: #000000 !important;
+  border-color: #323232 !important;
+  color:white !important;
+}

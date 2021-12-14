@@ -6,8 +6,11 @@
   font-size: 1.5em;
 }
 
+
 .my-contact-card{
   margin-bottom: 1em;
+  background: #1F1F1F;
+  color:white;
 }
 
 .card-action-buttons{
@@ -15,6 +18,9 @@
   justify-content: space-between;
 }
 
+.my-btn-success{
+  background: #33D788;
+}
 .btn-group-fab {
   position: fixed;
   width: 50px;
