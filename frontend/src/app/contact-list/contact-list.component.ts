@@ -9,14 +9,17 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 })
 export class ContactListComponent implements OnInit {
   public contacts: Array<Contact>;
+  public filteredContacts: Array<Contact>;
   public edit = true;
   public contactName = '';
   public contactMail = '';
+  public filter = '';
 
   display = 'none';
 
   constructor() {
     this.contacts = new Array<Contact>();
+    this.filteredContacts = new Array<Contact>();
 
     for (let i = 0; i < 10; i++) {
       const contact = {
@@ -27,12 +30,23 @@ export class ContactListComponent implements OnInit {
 
 
       this.contacts.push(contact);
+      this.filteredContacts.push(contact);
     }
 
 
   }
 
+
   ngOnInit(): void {
+  }
+
+  public filterContacts(){
+    if(this.filter === ''){
+      this.filteredContacts = this.contacts;
+    }
+    else{
+      this.filteredContacts = this.contacts.filter(contact => contact.name.toLowerCase().indexOf(this.filter.toLowerCase()) > -1);
+    }
   }
 
   public editContact(id: number) {

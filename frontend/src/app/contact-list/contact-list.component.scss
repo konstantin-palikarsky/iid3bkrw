@@ -5,7 +5,18 @@
 #edit{
   font-size: 1.5em;
 }
-
+.search-form-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.search-form-container input{
+  width:100%;
+  border: 4px solid #1F1F1F !important;
+}
+.search-form-container input::placeholder{
+  color: #c4c4c4 !important;
+}
 
 .my-contact-card{
   margin-bottom: 1em;
