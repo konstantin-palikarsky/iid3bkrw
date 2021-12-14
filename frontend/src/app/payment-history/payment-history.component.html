@@ -7,34 +7,48 @@
            (ngModelChange)="filterTransactions()" name="contactName">
   </form>
 
-  <div class="row" *ngFor="let transaction of filteredTransactions">
-    <div class="col">
+  <!-- contents row -->
+  <div class="contents-present" *ngIf="transactions.length!==0 && filteredTransactions.length!==0">
+    <div class="row"
+         *ngFor="let transaction of filteredTransactions">
+      <div class="col">
 
-      <div class="card my-transaction-card">
-        <div class="card-body">
-          <h5 class="card-title">
-            {{transaction.isPayment ? "To: " + transaction.receiver : "From: " + transaction.sender}}
-          </h5>
-
-
-          <h6 class="card-subtitle mb-2 text-muted">{{transaction.date.toDateString()}}</h6>
-
-
-          <div class="my-card-footer">
-            <h5 class="card-title"
-                [ngClass]="{'sent-amount': transaction.isPayment, 'received-amount': !transaction.isPayment}">
-              {{transaction.isPayment ? "-€" : "€"}}{{transaction.amount}}
+        <div class="card my-transaction-card">
+          <div class="card-body">
+            <h5 class="card-title">
+              {{transaction.isPayment ? "To: " + transaction.receiver : "From: " + transaction.sender}}
             </h5>
-            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal"
-                    (click)="transactionDetailed = transaction">Details
-            </button>
-          </div>
 
+
+            <h6 class="card-subtitle mb-2 text-muted">{{transaction.date.toDateString()}}</h6>
+
+
+            <div class="my-card-footer">
+              <h5 class="card-title"
+                  [ngClass]="{'sent-amount': transaction.isPayment, 'received-amount': !transaction.isPayment}">
+                {{transaction.isPayment ? "-€" : "€"}}{{transaction.amount}}
+              </h5>
+              <button type="button" class="btn btn-info" data-toggle="modal" data-target="#detailsModal"
+                      (click)="transactionDetailed = transaction">Details
+              </button>
+            </div>
+
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
+
+  <!-- Nothing found row-->
+  <div class="contents-absent" *ngIf="transactions.length!==0 && filteredTransactions.length===0">
+    <div class="row">
+      <div class="col">
+        <h4>We couldn't find any transactions corresponding to your keyword.</h4>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="modal fade" id="detailsModal" tabindex="-1" role="dialog" aria-labelledby="detailsModalLabel"

@@ -6,38 +6,52 @@
     <input class="form-control" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="filter"
            (ngModelChange)="filterContacts()" name="contactName">
   </form>
-  <div class="row" *ngFor="let contact of filteredContacts">
-    <div class="col">
 
-      <div class="card my-contact-card">
-        <div class="card-body">
-          <div class="contact-edit">
-            <h5 class="card-title">{{contact.name}}</h5>
-            <div class="dropdown dropleft">
-              <i class="fa fa-ellipsis-h" id="dropdownMenuButton" data-toggle="dropdown" aria-hidden="true"></i>
+  <!-- Contents Row -->
+  <div class="contents-row" *ngIf="contacts.length!==0 && filteredContacts.length!==0">
+    <div class="row" *ngFor="let contact of filteredContacts">
+      <div class="col">
 
-              <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                <a class="dropdown-item my-edit" data-toggle="modal" data-target="#exampleModalCenter"
-                   (click)="editContact(contact.id)">Edit</a>
-                <a class="dropdown-item my-delete" data-toggle="modal" data-target="#exampleModal">Delete</a>
+        <div class="card my-contact-card">
+          <div class="card-body">
+            <div class="contact-edit">
+              <h5 class="card-title">{{contact.name}}</h5>
+              <div class="dropdown dropleft">
+                <i class="fa fa-ellipsis-h" id="dropdownMenuButton" data-toggle="dropdown" aria-hidden="true"></i>
+
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item my-edit" data-toggle="modal" data-target="#exampleModalCenter"
+                     (click)="editContact(contact.id)">Edit</a>
+                  <a class="dropdown-item my-delete" data-toggle="modal" data-target="#exampleModal">Delete</a>
+                </div>
               </div>
             </div>
-          </div>
 
-          <h6 class="card-subtitle mb-2 text-muted">{{contact.email}}</h6>
-          <div class="card-action-buttons">
-            <button class="btn btn-info"><i class="fa fa-paper-plane-o"></i> Send</button>
-            <button class="btn btn-success" (click)="editContact(contact.id)" data-toggle="modal"
-                    data-target="#requestMoneyModal">
-              <i class="fa fa-credit-card"></i> Request
-            </button>
-          </div>
+            <h6 class="card-subtitle mb-2 text-muted">{{contact.email}}</h6>
+            <div class="card-action-buttons">
+              <button class="btn btn-info"><i class="fa fa-paper-plane-o"></i> Send</button>
+              <button class="btn btn-success" (click)="editContact(contact.id)" data-toggle="modal"
+                      data-target="#requestMoneyModal">
+                <i class="fa fa-credit-card"></i> Request
+              </button>
+            </div>
 
+          </div>
         </div>
       </div>
-    </div>
 
+    </div>
   </div>
+
+  <!-- Nothing found row-->
+  <div class="contents-absent" *ngIf="contacts.length!==0 && filteredContacts.length===0">
+    <div class="row">
+      <div class="col">
+        <h4>We couldn't find any contacts corresponding to your keyword.</h4>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <div class="btn-group-fab" role="group" aria-label="FAB Menu">
