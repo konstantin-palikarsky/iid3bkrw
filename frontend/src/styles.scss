@@ -37,8 +37,19 @@ html{
   color:white !important;
 }
 
-.modal-content input{
+
+input{
   background: #000000 !important;
   border-color: #323232 !important;
   color:white !important;
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color:white !important;
+}
+
+
