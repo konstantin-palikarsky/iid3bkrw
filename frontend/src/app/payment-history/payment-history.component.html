@@ -2,7 +2,12 @@
 
 
 <div class="container">
-  <div class="row" *ngFor="let transaction of transactions">
+  <form class="search-form-container">
+    <input class="form-control" type="search" placeholder="Search" aria-label="Search" [(ngModel)]="filter"
+           (ngModelChange)="filterTransactions()" name="contactName">
+  </form>
+
+  <div class="row" *ngFor="let transaction of filteredTransactions">
     <div class="col">
 
       <div class="card my-transaction-card">
