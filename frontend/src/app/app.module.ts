@@ -13,6 +13,7 @@ import {PaymentHistoryComponent} from './payment-history/payment-history.compone
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
 import { PaymentComponent } from './payment/payment.component';
+import { RequestPaymentComponent } from './receive-payment/receive-payment.component';
 
 
 @NgModule({
@@ -24,6 +25,7 @@ import { PaymentComponent } from './payment/payment.component';
     LandingPageComponent,
     LoginPageComponent,
     PaymentComponent,
+    RequestPaymentComponent,
   ],
   imports: [
     BrowserModule,
