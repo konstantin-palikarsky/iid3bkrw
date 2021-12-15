@@ -3,21 +3,21 @@
 <div class="container">
   <div class="row">
     <div class="col">
-      <div class="alert alert-success alert-dismissable fade show" role="alert">
+      <div class="alert alert-success  fade show" role="alert">
         <button type="button" class="close" data-dismiss="alert">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h2 class="alert-heading">Recieved a Payment!</h2>
-        <h6><b>Recieved from:</b></h6>
+        <h2 class="alert-heading">Received a payment!</h2>
+        <h6><b>Payment by:</b></h6>
         <p>{{transactionDetailed.sender}}</p>
-        <h6><b>Email of Sender:</b></h6>
+        <h6><b>Email of payer:</b></h6>
         <p>{{transactionDetailed.email}}</p>
-        <h6><b>Time of transaction:</b></h6>
+        <h6><b>Time of payment:</b></h6>
         <p>{{transactionDetailed.date.toDateString()+", " + transactionDetailed.date.toLocaleTimeString()}} </p>
-        <h6><b>Recieved Amount;</b></h6>
+        <h6><b>Received amount:</b></h6>
         <p><b>{{transactionDetailed.amount+""+"€"}}</b>
-        <p><button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="alert" (click)="transactionDetailed.amount+transactionDetailed.amount">Accept Payment</button>
-        <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="alert">Decline Payment</button></p>
+        <p><button type="button" class="btn btn-success btn-lg btn-block" data-dismiss="alert">Accept Payment</button>
+        <button type="button" class="btn btn-danger btn-lg btn-block"  data-dismiss="alert">Decline Payment</button></p>
       </div>
     </div>
   </div>
@@ -28,11 +28,3 @@
 
 
 
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-        crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
-        crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
-        crossorigin="anonymous"></script>

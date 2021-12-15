@@ -7,27 +7,19 @@ import {Transaction} from '../objects/transaction';
   styleUrls: ['./recievePayment.component.scss']
 })
 export class RecievePaymentComponent implements OnInit {
-  public transactions: Array<Transaction>;
   public transactionDetailed: Transaction;
 
 
   constructor() {
-    let transaction;
-    this.transactions = new Array<Transaction>();
-
-
-
-         transaction = {
-          sender: 'Current User',
-          receiver: 'Good Kid' + 1,
-          email: 'GoodKid' + 100 + '@gmail.com',
-          amount: 100+100,
-          id: 1,
-          date: new Date(),
-          isPayment: false
-        };
-      this.transactions.push(transaction);
-      this.transactionDetailed=transaction;
+      this.transactionDetailed = {
+              sender: 'GoodKid 100',
+              receiver: 'Current User',
+              email: 'GoodKid' + 100 + '@gmail.com',
+              amount: 100+100,
+              id: 1,
+              date: new Date(),
+              isPayment: false
+            };
     }
 
   ngOnInit(): void {
