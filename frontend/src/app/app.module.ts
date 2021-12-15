@@ -13,7 +13,7 @@ import {PaymentHistoryComponent} from './payment-history/payment-history.compone
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
 import {RecievePaymentComponent} from './recievePayment/recievePayment.component';
-import {CreatePaymentComponent} from "./createPayment/createPayment.component";
+
 
 
 @NgModule({
@@ -25,7 +25,6 @@ import {CreatePaymentComponent} from "./createPayment/createPayment.component";
     LandingPageComponent,
     LoginPageComponent,
     RecievePaymentComponent,
-    CreatePaymentComponent,
   ],
   imports: [
     BrowserModule,

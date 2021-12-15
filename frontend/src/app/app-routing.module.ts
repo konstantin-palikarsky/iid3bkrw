@@ -5,7 +5,7 @@ import {PaymentHistoryComponent} from './payment-history/payment-history.compone
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
 import {RecievePaymentComponent} from './recievePayment/recievePayment.component';
-import {CreatePaymentComponent} from './createPayment/createPayment.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'auth', pathMatch: 'full'},
@@ -14,7 +14,6 @@ const routes: Routes = [
   {path: 'contacts', component: ContactListComponent},
   {path: 'payments', component: PaymentHistoryComponent},
   {path: 'recieve', component: RecievePaymentComponent},
-  {path: 'create', component: CreatePaymentComponent}
 ];
 
 @NgModule({
