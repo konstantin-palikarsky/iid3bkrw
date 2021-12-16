@@ -1,0 +1,66 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<div *ngIf="isWhitelisted" class="container">
+  <div class="row">
+    <div class="col">
+      <div class="alert alert-success  fade show" role="alert">
+
+        <div class="container">
+          <div class="row">
+            <div class="col">
+              <h4 class="alert-heading"><b>You have received a transaction!</b></h4>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <h6><b>Payment by:</b></h6>
+            </div>
+            <div class="col">
+              <p>{{transactionDetailed.sender}}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <h6><b>Sender email:</b></h6>
+            </div>
+            <div class="col">
+              <p>{{transactionDetailed.email}}</p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <h6><b>Date of Transaction:</b></h6>
+            </div>
+            <div class="col">
+              <p>{{transactionDetailed.date.toDateString() + ", " + transactionDetailed.date.toLocaleTimeString()}} </p>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col">
+              <h6><b>Amount to be added:</b></h6>
+            </div>
+            <div class="col">
+              <p><b>{{transactionDetailed.amount + "" + "€"}}</b>
+            </div>
+          </div>
+        </div>
+
+        <p>
+          <button type="button" class="btn btn-success btn-lg btn-block" data-dismiss="alert">Accept Payment</button>
+          <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="alert">Decline Payment</button>
+        </p>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+

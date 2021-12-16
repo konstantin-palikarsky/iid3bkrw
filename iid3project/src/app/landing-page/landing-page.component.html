@@ -1,0 +1,45 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+<div class="container">
+
+  <div class="col welcome-col">
+    <h2>Welcome back, User!</h2>
+  </div>
+
+  <div class="row card-row">
+    <div class="col">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="card-text funds-text">€ 2873.53</h1>
+          <h6 class="text-muted available-text">BALANCE</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="fab-container">
+  <button routerLink="/send-payment" class="btn btn-info fab-add-payment">
+    <div class="send"></div>
+  </button>
+  <button routerLink="/receive-payment" class="btn btn-info fab-receive-payment">
+    <div class="receive"></div>
+  </button>
+  <button (click)="toggleFab($event)" class="btn btn-info fab-main">
+    <i class="fa fa-plus"></i>
+  </button>
+</div>
+
+<div class="row buttons-row">
+  <div class="col button-col">
+    <button routerLink="/contacts" class="btn btn-success"><i class="fa fa-address-book-o" aria-hidden="true"></i></button>
+    <label>Contacts</label>
+  </div>
+  <div class="col ">
+    <button routerLink="/payments" class="btn btn-success"><i class="fa fa-book" aria-hidden="true"></i></button>
+    <label>Transactions</label>
+  </div>
+</div>
+
+
+

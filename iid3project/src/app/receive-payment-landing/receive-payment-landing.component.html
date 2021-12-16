@@ -1,0 +1,190 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+  <li [ngbNavItem]="1">
+    <a ngbNavLink><i class="fas fa-user"></i>Direct Payment</a>
+    <ng-template ngbNavContent>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input
+                      type="email"
+                      name="email"
+                      class="form-control"
+                      [(ngModel)]="directPayment.email"
+                      id="email"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter email"
+                    />
+                  </div>
+
+                  <div class="form-group">
+                    <label for="amount">Amount</label>
+                    <div class="input-group mb-3">
+                      <input
+                        name="amount"
+                        type="number"
+                        class="form-control"
+                        [(ngModel)]="directPayment.amount"
+                        id="amount"
+                        placeholder="0.00"
+                      />
+
+                      <div class="input-group-append">
+                        <select
+                          name="currency"
+                          class="form-control currency"
+                          id="currency"
+                        >
+                          <option value="USD">$ (USD)</option>
+                          <option value="CAD">$ (CAD)</option>
+                          <option value="EUR">€ (EUR)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <button
+                    type="submit"
+                    class="btn btn-info"
+                    data-toggle="modal"
+                    data-target="#exampleModalCenter"
+                  >
+                    Confirm
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </li>
+  <li [ngbNavItem]="2">
+    <a ngbNavLink><i class="fas fa-users"></i>Split Payment</a>
+    <ng-template ngbNavContent>
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <form>
+                  <div class="form-group">
+                    <label for="sharedPaymentName">Name</label>
+                    <input
+                      type="text"
+                      name="sharedPaymentName"
+                      class="form-control"
+                      id="sharedPaymentName"
+                      [(ngModel)]="sharedPaymentName"
+                      placeholder="Enter describing name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="amountTotal">Total</label>
+                    <div class="input-group mb-3">
+                      <input
+                        name="amountTotal"
+                        type="number"
+                        class="form-control"
+                        [(ngModel)]="sharedTotal"
+                        (change)="amountChanged()"
+                        id="amountTotal"
+                      />
+
+                      <div class="input-group-append">
+                        <select
+                          name="currency"
+                          class="form-control currency"
+                          id="currency2"
+
+                        >
+                          <option value="USD">$ (USD)</option>
+                          <option value="CAD">$ (CAD)</option>
+                          <option value="EUR">€ (EUR)</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+
+                  <hr>
+                  <div class="payment" *ngFor="let payment of sharedPayment; let i = index">
+                    <div class="form-group">
+                      <label for="email{{i}}">Email address</label>
+                      <input
+                        type="email"
+                        name="email{{i}}"
+                        class="form-control"
+                        id="email{{i}}"
+                        [(ngModel)]="payment.email"
+                        aria-describedby="emailHelp"
+                        placeholder="Enter email"
+                      />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="amount{{i}}">Amount</label>
+                      <div class="input-group mb-3">
+                        <input
+                          name="amount{{i}}"
+                          type="number"
+                          class="form-control"
+                          id="amount{{i}}"
+                          [(ngModel)]="payment.amount"
+                          (change)="amountChanged()"
+                          placeholder="0.00"
+                        />
+
+                        <div class="input-group-append">
+                          <select
+                            name="currency"
+                            class="form-control currency"
+                            id="currency{{i}}"
+                          >
+                            <option value="USD">$ (USD)</option>
+                            <option value="CAD">$ (CAD)</option>
+                            <option value="EUR">€ (EUR)</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                  </div>
+
+                  <div class="button-group">
+                    <button
+                      type="button"
+                      class="btn btn-info"
+                      (click)="addRecipient()"
+                    >
+                      Add Recipient
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-info"
+                      (click)="splitEvenly()"
+                    >
+                      Split Evenly
+                    </button>
+                  </div>
+                  <hr>
+                  <button
+                    type="submit"
+                    class="btn btn-info"
+                    [disabled]="!correctAmount"
+                  >
+                    Confirm
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </li>
+</ul>
+
+<div [ngbNavOutlet]="nav" class="mt-2"></div>

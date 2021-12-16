@@ -1,0 +1,81 @@
+.contact-edit{
+  display: flex;
+  justify-content: space-between;
+}
+#edit{
+  font-size: 1.5em;
+}
+.search-form-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.search-form-container input{
+  width:100%;
+  border: 4px solid #1F1F1F !important;
+}
+.search-form-container input::placeholder{
+  color: #c4c4c4 !important;
+}
+
+.my-contact-card{
+  margin-bottom: 1em;
+  background: #1F1F1F;
+  color:white;
+}
+
+.card-action-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.my-btn-success{
+  background: #33D788;
+}
+.btn-group-fab {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  border: 1px solid black!important;
+  display: inline-block;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  order: 1;
+  i {
+    font-size: 2rem;
+    color: white;
+  }
+}
+.btn-group-fab .btn-main {
+  &:active {
+    border: none!important;
+    box-shadow: none!important;
+  }
+  &:focus {
+    border: none!important;
+    box-shadow: none!important;
+  }
+  border: 1px solid black!important;
+  display: inline-block;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  order: 1;
+  i {
+    font-size: 2rem;
+    color: white;
+  }
+}
+
+.my-input{
+  margin-bottom: 0.5em;
+}
+
+.my-ng-dropdown{
+  margin-left: -4em;
+}
+
+.contents-absent h4{
+  color: grey !important;
+}

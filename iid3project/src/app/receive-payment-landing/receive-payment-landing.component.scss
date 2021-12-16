@@ -1,0 +1,38 @@
+.fa, .fas {
+    width: 1rem;
+    height: 1rem;
+    display: block;
+}
+
+a[ngbNavLink] {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.row {
+    display: flex;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.currency {
+    background: black;
+    color: white;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    border: 1px solid #495057!important;
+}
+
+.nav-link.active {
+    background: #495057!important;
+    color: white;
+}
+
+.nav-link {
+    color: white;
+}
