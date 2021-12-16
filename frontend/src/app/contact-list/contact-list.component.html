@@ -29,9 +29,11 @@
             <!-- send Button-->
           <h6 class="card-subtitle mb-2 text-muted">{{contact.email}}</h6>
           <div class="card-action-buttons">
-            <button class="btn btn-info" (click)="editContact(contact.id)" data-toggle="modal"
+            <button class="btn btn-info" (click)="editContact(contact.id)" routerLink="/send-payment"
                     data-target="#sendMoneyModal"><i class="fa fa-paper-plane-o"></i> Send</button>
-            <button class="btn btn-success" (click)="editContact(contact.id)" data-toggle="modal"
+
+
+            <button class="btn btn-success" (click)="editContact(contact.id)" routerLink="/receive-payment"
                     data-target="#requestMoneyModal">
               <i class="fa fa-credit-card"></i> Request
             </button>
@@ -116,66 +118,6 @@
       <div class="modal-footer">
         <button type="button" class="btn btn-outline-light" data-dismiss="modal">Dismiss</button>
         <button type="button" class="btn btn-danger">Delete</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- requestMoneyModal -->
-<div class="modal fade" id="requestMoneyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="requestMoneyModalTitle">Request Payment</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Requesting payment from {{contactName}}.
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Amount:</label>
-            <input type="number" class="form-control" id="inputMoney" aria-describedby="emailHelp"
-                   placeholder="Specify requested sum €">
-          </div>
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline-light" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-success">Request payment</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- send money Modal-->
-<div class="modal fade" id="sendMoneyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title" id="sendMoneyModalTitle">Make a Payment</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-        Make a payment to {{contactName}}.
-        <form>
-          <div class="form-group">
-            <label for="exampleInputEmail1">Amount:</label>
-            <input type="number" class="form-control" id="outputMoney" aria-describedby="emailHelp"
-                   placeholder="Specify amount to send €">
-          </div>
-        </form>
-
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-        <button type="button" class="btn btn-success" data-dismiss="modal">Send</button>
       </div>
     </div>
   </div>
