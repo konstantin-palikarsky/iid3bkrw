@@ -57,12 +57,11 @@
 
 .buttons-row i {
   font-size: 2em;
+  z-index: 0 !important;
 }
 
-
-
 .fab-container {
-  position: absolute;
+  position: fixed;
   right: 2rem;
   bottom: 5rem;
   display: flex;
