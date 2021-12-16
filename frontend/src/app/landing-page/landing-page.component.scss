@@ -55,7 +55,6 @@
 .btn {
   border-radius: 0.5em;
   color: black;
-  background: #33D788;
   height: 4em;
   width: 100%;
 }
@@ -80,7 +79,7 @@
     height: 3rem;
     width: 3rem;
     padding: 0.3rem;
-    
+    color: white;
     &:active {
       border: none!important;
       box-shadow: none!important;
@@ -106,8 +105,8 @@
     height: 4rem;
     order: 1;
     i {
-      font-size: 2.5rem;
-      color: black;
+      font-size: 2rem;
+      color: white;
     }
   }
   &.open {
@@ -120,7 +119,7 @@
 .send {
   height: 100%;
   width: 100%;
-  background: black;
+  background: white;
   -webkit-mask-image: url(/assets/send.svg);
   -webkit-mask-size: contain;
   -webkit-mask-position: center;
@@ -134,7 +133,7 @@
 .receive {
   height: 100%;
   width: 100%;
-  background: black;
+  background: white;
   -webkit-mask-image: url(/assets/request.svg);
   -webkit-mask-size: contain;
   -webkit-mask-position: center;
