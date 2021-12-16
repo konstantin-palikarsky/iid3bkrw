@@ -4,7 +4,7 @@ import {ContactListComponent} from './contact-list/contact-list.component';
 import {PaymentHistoryComponent} from './payment-history/payment-history.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
-import {RecievePaymentComponent} from './recievePayment/recievePayment.component';
+import {ReceivePayment} from './receive-payment/receive-payment';
 
 
 const routes: Routes = [
@@ -13,7 +13,7 @@ const routes: Routes = [
   {path: 'landing', component: LandingPageComponent},
   {path: 'contacts', component: ContactListComponent},
   {path: 'payments', component: PaymentHistoryComponent},
-  {path: 'recieve', component: RecievePaymentComponent},
+  {path: 'recieve', component: ReceivePayment},
 ];
 
 @NgModule({
