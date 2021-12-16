@@ -14,7 +14,6 @@ export class PaymentComponent implements OnInit {
 
   ngOnInit(): void {
     this.amount = 0;
-    console.log(this.email);
     this.test = this.route.params.subscribe(params => {
       this.email = params['email']; // (+) converts string 'id' to a number
 

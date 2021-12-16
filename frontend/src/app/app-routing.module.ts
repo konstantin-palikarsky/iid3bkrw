@@ -14,6 +14,8 @@ const routes: Routes = [
   {path: 'landing', component: LandingPageComponent},
   {path: 'contacts', component: ContactListComponent},
   {path: 'send-payment/:email', component: PaymentComponent},
+  {path: 'receive-payment/:email', component: RequestPaymentComponent},
+  {path: 'send-payment', component: PaymentComponent},
   {path: 'receive-payment', component: RequestPaymentComponent},
   {path: 'payments', component: PaymentHistoryComponent},
 ];

@@ -33,7 +33,7 @@
                     data-target="#sendMoneyModal"><i class="fa fa-paper-plane-o"></i> Send</button>
 
 
-            <button class="btn btn-success" (click)="editContact(contact.id)" routerLink="/receive-payment"
+            <button class="btn btn-success" (click)="editContact(contact.id)" [routerLink]="['/receive-payment', contact.email]"
                     data-target="#requestMoneyModal">
               <i class="fa fa-credit-card"></i> Request
             </button>

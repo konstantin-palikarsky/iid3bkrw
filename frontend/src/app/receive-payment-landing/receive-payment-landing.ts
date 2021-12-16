@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Payment } from '../payment';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-receive-payment',
@@ -12,7 +13,8 @@ export class RequestPaymentComponent implements OnInit {
   sharedTotal: number;
   sharedPayment: Payment[];
   correctAmount;
-  constructor() { }
+  test: any;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.directPayment = {
@@ -25,6 +27,9 @@ export class RequestPaymentComponent implements OnInit {
       amount: 0
     }];
     this.correctAmount = false;
+    this.test = this.route.params.subscribe(params => {
+      this.directPayment.email = params['email'];
+   });
   }
 
   addRecipient() {
