@@ -37,9 +37,22 @@ export class RequestPaymentComponent implements OnInit {
   amountChanged() {
     let paymentSum:number = this.sharedPayment.reduce((acc, cur) => acc + cur.amount, 0); 
     this.correctAmount = (paymentSum === this.sharedTotal) && this.sharedTotal > 0;
-    console.log(`sumArray: ${paymentSum}`);
-    console.log(`totalExpected: ${this.sharedTotal}`);
-    console.log(`correct: ${this.correctAmount}`);
   }
 
+  splitEvenly() {
+    const n = this.sharedPayment.length;
+    const total = this.sharedTotal * 100;
+    let mod = total % n;
+    const split = Math.floor(total/n) / 100;
+    this.sharedPayment.forEach((payment) => {
+      if(mod-- > 0) {
+        payment.amount = split + 0.01;
+      }
+      else {
+        payment.amount = split;
+      }
+    });
+    let paymentSum:number = this.sharedPayment.reduce((acc, cur) => acc + cur.amount, 0); 
+    this.correctAmount = (paymentSum === this.sharedTotal) && this.sharedTotal > 0;
+  }
 }
