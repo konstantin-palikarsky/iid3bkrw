@@ -8,8 +8,10 @@ import {Location} from '@angular/common';
 })
 export class HeaderComponent implements OnInit {
   public isLandingPage: boolean;
+  public isAuthPage: boolean;
   public pageTitle: string;
   public pageTitles = {
+    '/auth': 'Login',
     '/landing': 'Home',
     '/payments': 'Transactions',
     '/contacts': 'Contacts',
@@ -24,6 +26,7 @@ export class HeaderComponent implements OnInit {
     this.location.onUrlChange((url, state) => {
       this.isLandingPage = false;
       this.isLandingPage = this.location.isCurrentPathEqualTo('/landing');
+      this.isAuthPage = this.location.isCurrentPathEqualTo('/auth');
       this.pageTitle = this.pageTitles[this.location.path()];
     });
   }

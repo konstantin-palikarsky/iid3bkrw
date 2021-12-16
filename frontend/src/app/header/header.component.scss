@@ -8,13 +8,9 @@
 .navbar h3{
   color: white;
 }
-.fa-user-circle-o{
+.fa-sign-out{
   color:white;
   margin-top: 0.3em;
   font-size: 1.8em;
-}
-.fa-cog{
-  color:white;
-  margin-top: 0.3em;
-  font-size: 2em;
+  transform: rotate(180deg)
 }
