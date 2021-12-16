@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Contact} from '../objects/contact';
-import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-contact-list',
@@ -21,30 +20,68 @@ export class ContactListComponent implements OnInit {
     this.contacts = new Array<Contact>();
     this.filteredContacts = new Array<Contact>();
 
-    for (let i = 0; i < 10; i++) {
-      const contact = {
-        name: 'Santa Claus' + i,
-        email: 'santa.claus@gmail.com' + i,
-        id: i
-      };
+    this.contacts = [
+      {
+        name: 'Santa Claus',
+        email: 'santa.claus@gmail.com',
+        id: 0
+      },
+      {
+        name: 'Berke Akkaya',
+        email: 'berke@gmail.com',
+        id: 1
+      },
+      {
+        name: 'Konstantin Palikarsky',
+        email: 'konstantin@gmail.com',
+        id: 2
+      }, {
+        name: 'Rumen Kolev',
+        email: 'rumen@gmail.com',
+        id: 3
+      },
+      {
+        name: 'Wolfgang Koch',
+        email: 'wolfgang@gmail.com',
+        id: 4
+      }, {
+        name: 'Elizabeth Windsor',
+        email: 'elizabeth@gmail.com',
+        id: 5
+      }, {
+        name: 'Thomas Müller',
+        email: 'thomas@gmail.com',
+        id: 6
+      },
+      {
+        name: 'Manuel Neuer',
+        email: 'manuel@gmail.com',
+        id: 7
+      },
+      {
+        name: 'Napoleon Bonaparte',
+        email: 'tallguy@gmail.com',
+        id: 8
+      },
+      {
+        name: 'Ivan Ivanovski',
+        email: 'ivan@gmail.com',
+        id: 9
+      }];
 
-
-      this.contacts.push(contact);
+    this.contacts.forEach((contact) => {
       this.filteredContacts.push(contact);
-    }
-
-
+    });
   }
 
 
   ngOnInit(): void {
   }
 
-  public filterContacts(){
-    if(this.filter === ''){
+  public filterContacts() {
+    if (this.filter === '') {
       this.filteredContacts = this.contacts;
-    }
-    else{
+    } else {
       this.filteredContacts = this.contacts.filter(contact => contact.name.toLowerCase().indexOf(this.filter.toLowerCase()) > -1);
     }
   }

@@ -13,13 +13,13 @@ export class ReceivePaymentComponent implements OnInit {
 
   constructor(private location: Location) {
     this.transactionDetailed = {
-      sender: 'GoodKid 100',
-      receiver: 'Current User',
-      email: 'GoodKid' + 100 + '@gmail.com',
-      amount: 100 + 100,
-      id: 1,
+      sender: 'Santa Clause',
+      receiver: 'Konstantin Palikarsky',
+      email: 'konstantin@gmail.com',
+      amount: 100,
+      id: 3,
       date: new Date(),
-      isPayment: false
+      isPayment: true
     };
   }
 

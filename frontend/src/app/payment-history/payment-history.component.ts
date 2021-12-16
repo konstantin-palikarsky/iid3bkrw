@@ -18,32 +18,84 @@ export class PaymentHistoryComponent implements OnInit {
     this.filteredTransactions = new Array<Transaction>();
 
 
-    for (let i = 0; i < 10; i++) {
-      if (i % 2 === 0) {
-        transaction = {
-          sender: 'Current User',
-          receiver: 'Good Kid' + i,
-          email: 'GoodKid' + i + '@gmail.com',
-          amount: i + 100,
-          id: i,
-          date: new Date(),
-          isPayment: true
-        };
-      } else {
-        transaction = {
-          sender: 'Good Kid' + i,
-          receiver: 'Current User',
-          email: 'GoodKid' + i + '@gmail.com',
-          amount: i + 100,
-          id: i,
-          date: new Date(),
-          isPayment: false
-        };
-      }
+    this.transactions = [{
+      sender: 'Current User',
+      receiver: 'Santa Clause',
+      email: 'santa@gmail.com',
+      amount: 30,
+      id: 0,
+      date: new Date(),
+      isPayment: true
+    }, {
+      sender: 'Napoleon Bonaparte',
+      receiver: 'Current User',
+      email: 'tallguy@gmail.com',
+      amount: 100,
+      id: 1,
+      date: new Date(),
+      isPayment: false
+    }, {
+      sender: 'Manuel Neuer',
+      receiver: 'Manuel Neuer',
+      email: 'manuel@gmail.com',
+      amount: 100,
+      id: 2,
+      date: new Date(),
+      isPayment: true
+    }, {
+      sender: 'Napolean Bonaparte',
+      receiver: 'Current User',
+      email: 'tallguy@gmail.com',
+      amount: 200,
+      id: 2,
+      date: new Date(),
+      isPayment: false
+    }, {
+      sender: '',
+      receiver: 'Konstantin Palikarsky',
+      email: 'konstantin@gmail.com',
+      amount: 100,
+      id: 3,
+      date: new Date(),
+      isPayment: true
+    }, {
+      sender: 'Ivanov Ivanovski',
+      receiver: 'Current User',
+      email: 'ivan@gmail.com',
+      amount: 300,
+      id: 4,
+      date: new Date(),
+      isPayment: false
+    }, {
+      sender: '',
+      receiver: 'Santa Clause',
+      email: 'santa@gmail.com',
+      amount: 489,
+      id: 5,
+      date: new Date(),
+      isPayment: true
+    }, {
+      sender: 'Napoleon Bonaparte',
+      receiver: '',
+      email: 'tallguy@gmail.com',
+      amount: 330,
+      id: 6,
+      date: new Date(),
+      isPayment: false
+    }, {
+      sender: 'User',
+      receiver: 'Manuel Neuer',
+      email: 'manuel@gmail.com',
+      amount: 286,
+      id: 7,
+      date: new Date(),
+      isPayment: true
+    }];
 
-      this.transactions.push(transaction);
-      this.filteredTransactions.push(transaction);
-    }
+
+    this.transactions.forEach((contact) => {
+      this.filteredTransactions.push(contact);
+    });
 
   }
 
