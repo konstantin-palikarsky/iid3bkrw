@@ -3,8 +3,8 @@ import { Payment } from '../payment';
 
 @Component({
   selector: 'app-receive-payment',
-  templateUrl: './receive-payment.component.html',
-  styleUrls: ['./receive-payment.component.scss']
+  templateUrl: './receive-payment-landing.component.html',
+  styleUrls: ['./receive-payment-landing.component.scss']
 })
 export class RequestPaymentComponent implements OnInit {
   directPayment: Payment;
@@ -35,7 +35,7 @@ export class RequestPaymentComponent implements OnInit {
   }
 
   amountChanged() {
-    let paymentSum:number = this.sharedPayment.reduce((acc, cur) => acc + cur.amount, 0); 
+    const paymentSum: number = this.sharedPayment.reduce((acc, cur) => acc + cur.amount, 0);
     this.correctAmount = (paymentSum === this.sharedTotal) && this.sharedTotal > 0;
   }
 
@@ -52,7 +52,7 @@ export class RequestPaymentComponent implements OnInit {
         payment.amount = split;
       }
     });
-    let paymentSum:number = this.sharedPayment.reduce((acc, cur) => acc + cur.amount, 0); 
+    const paymentSum: number = this.sharedPayment.reduce((acc, cur) => acc + cur.amount, 0);
     this.correctAmount = (paymentSum === this.sharedTotal) && this.sharedTotal > 0;
   }
 }

@@ -3,7 +3,7 @@ import {Routes, RouterModule} from '@angular/router';
 import {ContactListComponent} from './contact-list/contact-list.component';
 import {PaymentHistoryComponent} from './payment-history/payment-history.component';
 import { PaymentComponent } from './payment/payment.component';
-import { RequestPaymentComponent } from './receive-payment/receive-payment.component';
+import { RequestPaymentComponent } from './receive-payment/receive-payment-landing';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
 
