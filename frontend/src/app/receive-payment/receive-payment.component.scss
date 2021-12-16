@@ -1,13 +1,16 @@
-.my-transaction-card{
+.my-transaction-card {
   margin-bottom: 1em;
 }
-.sent-amount{
+
+.sent-amount {
   color: #ff0000;
 }
-.received-amount{
-   color: #129412;
- }
-.my-card-footer{
+
+.received-amount {
+  color: #129412;
+}
+
+.my-card-footer {
   display: flex;
   justify-content: space-between;
 }

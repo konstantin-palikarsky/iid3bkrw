@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Transaction} from '../objects/transaction';
 
 @Component({
@@ -11,16 +11,16 @@ export class ReceivePaymentComponent implements OnInit {
 
 
   constructor() {
-      this.transactionDetailed = {
-              sender: 'GoodKid 100',
-              receiver: 'Current User',
-              email: 'GoodKid' + 100 + '@gmail.com',
-              amount: 100+100,
-              id: 1,
-              date: new Date(),
-              isPayment: false
-            };
-    }
+    this.transactionDetailed = {
+      sender: 'GoodKid 100',
+      receiver: 'Current User',
+      email: 'GoodKid' + 100 + '@gmail.com',
+      amount: 100 + 100,
+      id: 1,
+      date: new Date(),
+      isPayment: false
+    };
+  }
 
   ngOnInit(): void {
   }
