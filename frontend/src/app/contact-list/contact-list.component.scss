@@ -34,29 +34,38 @@
 }
 .btn-group-fab {
   position: fixed;
-  width: 50px;
-  height: auto;
-  right: 20px; bottom: 20px;
+  right: 2rem;
+  bottom: 2rem;
+  border: 1px solid black!important;
+  display: inline-block;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  order: 1;
   i {
-    font-size: 2rem!important;
+    font-size: 2rem;
+    color: white;
   }
 }
-.btn-group-fab div {
-  position: relative; width: 100%;
-  height: auto;
-}
-.btn-group-fab .btn {
-  position: absolute;
-  bottom: 0;
-  border-radius: 50%;
-  display: block;
-  width: 40px; height: 40px;
-  margin: 4px auto;
-}
 .btn-group-fab .btn-main {
-  width: 4em; height: 4em;
-  right: 50%; margin-right: -25px;
-  z-index: 9;
+  &:active {
+    border: none!important;
+    box-shadow: none!important;
+  }
+  &:focus {
+    border: none!important;
+    box-shadow: none!important;
+  }
+  border: 1px solid black!important;
+  display: inline-block;
+  border-radius: 100%;
+  width: 4rem;
+  height: 4rem;
+  order: 1;
+  i {
+    font-size: 2rem;
+    color: white;
+  }
 }
 
 .my-input{

@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./payment.component.scss']
 })
 export class PaymentComponent implements OnInit {
-
+  amount: number;
   constructor() { }
 
   ngOnInit(): void {
+    this.amount = 0;
   }
 
 }

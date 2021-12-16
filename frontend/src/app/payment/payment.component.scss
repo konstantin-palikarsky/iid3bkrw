@@ -18,3 +18,16 @@ a[ngbNavLink] {
 #accordion {
     margin-bottom: 1rem;
 }
+
+.fa-calendar{
+    color: white;
+}
+
+#currency {
+    background: black;
+    color: white;
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+    border: 1px solid #495057!important;
+}
