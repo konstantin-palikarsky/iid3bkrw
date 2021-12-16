@@ -12,6 +12,8 @@ import {HeaderComponent} from './header/header.component';
 import {PaymentHistoryComponent} from './payment-history/payment-history.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
+import {ReceivePaymentComponent} from './receive-payment/receive-payment.component';
+
 
 
 @NgModule({
@@ -22,6 +24,7 @@ import {LoginPageComponent} from './login-page/login-page.component';
     PaymentHistoryComponent,
     LandingPageComponent,
     LoginPageComponent,
+    ReceivePaymentComponent,
   ],
   imports: [
     BrowserModule,
