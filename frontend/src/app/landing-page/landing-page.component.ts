@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-landing-page',
@@ -7,13 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingPageComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void {
   }
 
-  toggleFab(event){
-    console.log(event.currentTarget);
+  toggleFab(event) {
     event.currentTarget.parentElement.classList.toggle('open');
   }
 
