@@ -3,10 +3,10 @@ import {Transaction} from '../objects/transaction';
 
 @Component({
   selector: 'app-recieve-payment',
-  templateUrl: './receive-payment.html',
-  styleUrls: ['./receive-payment.scss']
+  templateUrl: './receive-payment.component.html',
+  styleUrls: ['./receive-payment.component.scss']
 })
-export class ReceivePayment implements OnInit {
+export class ReceivePaymentComponent implements OnInit {
   public transactionDetailed: Transaction;
 
 

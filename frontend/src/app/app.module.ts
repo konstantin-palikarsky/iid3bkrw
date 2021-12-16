@@ -12,7 +12,7 @@ import {HeaderComponent} from './header/header.component';
 import {PaymentHistoryComponent} from './payment-history/payment-history.component';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
-import {ReceivePayment} from './receive-payment/receive-payment';
+import {ReceivePaymentComponent} from './receive-payment/receive-payment.component';
 
 
 
@@ -24,7 +24,7 @@ import {ReceivePayment} from './receive-payment/receive-payment';
     PaymentHistoryComponent,
     LandingPageComponent,
     LoginPageComponent,
-    ReceivePayment,
+    ReceivePaymentComponent,
   ],
   imports: [
     BrowserModule,
