@@ -35,9 +35,11 @@
 }
 
 .buttons-row {
-  width: 90%;
   margin-top: 5em;
   justify-content: space-between;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .buttons-row .col{
@@ -46,6 +48,9 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  label {
+    color: white;
+  }
 }
 .btn {
   border-radius: 0.5em;
@@ -68,14 +73,33 @@
   flex-direction: column;
   gap: 1rem;
   align-items: center;
+  z-index: 2;
   .btn {
     border-radius: 100%;
     display: none;
     height: 3rem;
     width: 3rem;
     padding: 0.3rem;
+    
+    &:active {
+      border: none!important;
+      box-shadow: none!important;
+    }
+    &:focus {
+      border: none!important;
+      box-shadow: none!important;
+    }
   }
   .fab-main{
+    &:active {
+      border: none!important;
+      box-shadow: none!important;
+    }
+    &:focus {
+      border: none!important;
+      box-shadow: none!important;
+    }
+    border: 1px solid black!important;
     display: inline-block;
     border-radius: 100%;
     width: 4rem;
@@ -83,6 +107,7 @@
     order: 1;
     i {
       font-size: 2.5rem;
+      color: black;
     }
   }
   &.open {
@@ -90,4 +115,32 @@
       display: inline-block;
     }
   }
+}
+
+.send {
+  height: 100%;
+  width: 100%;
+  background: black;
+  -webkit-mask-image: url(/assets/send.svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(/assets/send.svg);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
+}
+
+.receive {
+  height: 100%;
+  width: 100%;
+  background: black;
+  -webkit-mask-image: url(/assets/request.svg);
+  -webkit-mask-size: contain;
+  -webkit-mask-position: center;
+  -webkit-mask-repeat: no-repeat;
+  mask-image: url(/assets/request.svg);
+  mask-size: contain;
+  mask-position: center;
+  mask-repeat: no-repeat;
 }
