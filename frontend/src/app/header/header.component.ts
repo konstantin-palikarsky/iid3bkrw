@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {Location} from '@angular/common';
 
 @Component({
@@ -12,18 +12,23 @@ export class HeaderComponent implements OnInit {
   public pageTitles = {
     '/landing': 'Home',
     '/payments': 'Transactions',
-    '/contacts': 'Contacts'
+    '/contacts': 'Contacts',
+    '/send-payment': 'Send',
+    '/receive-payment': 'Request',
   };
-  constructor(private location: Location) {}
+
+  constructor(private location: Location) {
+  }
 
   ngOnInit(): void {
-    this.location.onUrlChange((url, state) =>{
+    this.location.onUrlChange((url, state) => {
+      this.isLandingPage = false;
       this.isLandingPage = this.location.isCurrentPathEqualTo('/landing');
       this.pageTitle = this.pageTitles[this.location.path()];
     });
   }
 
-  public goBack(){
+  public goBack() {
     this.location.back();
   }
 }
