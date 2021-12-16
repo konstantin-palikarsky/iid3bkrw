@@ -1,21 +1,18 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 
 <div class="container">
 
-  <div class="row-12">
-    <div class="col welcome-col">
-      <h3>Hello, user!</h3>
-    </div>
+  <div class="col welcome-col">
+    <h2>Welcome back, User!</h2>
   </div>
-
 
   <div class="row card-row">
     <div class="col">
       <div class="card">
         <div class="card-body">
           <h1 class="card-text funds-text">€ 2873.53</h1>
-          <h6 class="text-muted available-text">Available</h6>
-
+          <h6 class="text-muted available-text">BALANCE</h6>
         </div>
       </div>
     </div>
@@ -33,13 +30,16 @@
   </button>
 </div>
 
-<nav class="navbar my-bottom-nav fixed-bottom navbar-dark bg-primary">
-  <button routerLink="/contacts" class="btn bottom-nav-button"><i class="fa fa-address-book-o" aria-hidden="true"></i>
-    Contacts
-  </button>
+<div class="row buttons-row">
+  <div class="col button-col">
+    <button routerLink="/contacts" class="btn btn-success"><i class="fa fa-address-book-o" aria-hidden="true"></i></button>
+    <label>Contacts</label>
+  </div>
+  <div class="col ">
+    <button routerLink="/payments" class="btn btn-success"><i class="fa fa-book" aria-hidden="true"></i></button>
+    <label>Transactions</label>
+  </div>
+</div>
 
-  <button routerLink="/payments" class="btn bottom-nav-button"><i class="fa fa-book" aria-hidden="true"></i>
-    Payment history
-  </button>
 
-</nav>
+

@@ -2,3 +2,62 @@
 
 /* Importing Bootstrap SCSS file. */
 @import '/node_modules/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+html{
+  background: black;
+}
+.card{
+  background: #1F1F1F !important;
+  color:white !important;
+}
+.dropdown-menu{
+  background: #373737 !important;
+
+}
+.dropdown-item{
+  color:white !important;
+
+}
+h2,h2,h3,h4,h5,h6, button{
+  font-family: 'Montserrat', sans-serif !important;
+}
+p,label,input{
+  font-family: 'Cabin', sans-serif !important;
+}
+
+.btn-success{
+  background: #33D788 !important;
+  color:black !important;
+}
+
+.modal-content{
+  background: #1F1F1F !important;
+  color:white !important;
+}
+.modal-header {
+  border-bottom: 1px solid #000000 !important;
+}
+.modal-footer {
+  border-top: 1px solid #000000 !important;
+}
+.modal-content span{
+  color:white !important;
+}
+
+
+input{
+  background: #000000 !important;
+  border-color: #323232 !important;
+  color:white !important;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active{
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color:white !important;
+}
+
+

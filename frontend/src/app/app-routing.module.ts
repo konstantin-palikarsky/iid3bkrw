@@ -6,6 +6,8 @@ import { PaymentComponent } from './payment/payment.component';
 import { RequestPaymentComponent } from './receive-payment/receive-payment-landing';
 import {LandingPageComponent} from './landing-page/landing-page.component';
 import {LoginPageComponent} from './login-page/login-page.component';
+import {ReceivePaymentComponent} from './receive-payment/receive-payment.component';
+
 
 const routes: Routes = [
   {path: '', redirectTo: 'auth', pathMatch: 'full'},
@@ -15,7 +17,7 @@ const routes: Routes = [
   {path: 'payment', component: PaymentComponent},
   {path: 'receive-payment', component: RequestPaymentComponent},
   {path: 'payments', component: PaymentHistoryComponent},
-
+  {path: 'recieve', component: ReceivePaymentComponent},
 ];
 
 @NgModule({

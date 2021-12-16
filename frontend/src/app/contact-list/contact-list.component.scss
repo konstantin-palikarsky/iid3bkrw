@@ -5,9 +5,23 @@
 #edit{
   font-size: 1.5em;
 }
+.search-form-container{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2em;
+}
+.search-form-container input{
+  width:100%;
+  border: 4px solid #1F1F1F !important;
+}
+.search-form-container input::placeholder{
+  color: #c4c4c4 !important;
+}
 
 .my-contact-card{
   margin-bottom: 1em;
+  background: #1F1F1F;
+  color:white;
 }
 
 .card-action-buttons{
@@ -15,6 +29,9 @@
   justify-content: space-between;
 }
 
+.my-btn-success{
+  background: #33D788;
+}
 .btn-group-fab {
   position: fixed;
   width: 50px;
@@ -45,4 +62,8 @@
 
 .my-ng-dropdown{
   margin-left: -4em;
+}
+
+.contents-absent h4{
+  color: grey !important;
 }
